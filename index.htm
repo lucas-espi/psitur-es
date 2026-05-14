@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Psicotur</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
   :root {
     --bg: #F7F5F2;
@@ -1034,14 +1034,21 @@
 // ═══════════════════════════════════════════════
 const SUPABASE_URL = 'https://ctlagdrycsyxgqmichap.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN0bGFnZHJ5Y3N5eGdxbWljaGFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg2OTc3NzEsImV4cCI6MjA5NDI3Mzc3MX0.Qqsk84NSQxmvyzz_mfbkZLaDXvgTKmSrFbKqMU7ZoGM';
+const memStorage = {};
 const { createClient } = supabase;
 const sb = createClient(SUPABASE_URL, SUPABASE_KEY, {
   auth: {
     persistSession: false,
     autoRefreshToken: false,
-    detectSessionInUrl: false
+    detectSessionInUrl: false,
+    storage: {
+      getItem: (k) => memStorage[k] || null,
+      setItem: (k, v) => { memStorage[k] = v; },
+      removeItem: (k) => { delete memStorage[k]; }
+    }
   }
 });
+
 // ═══════════════════════════════════════════════
 // STATE
 // ═══════════════════════════════════════════════
@@ -1060,12 +1067,18 @@ let editingSessionId = null;
 // INIT
 // ═══════════════════════════════════════════════
 async function init() {
-  const { data: { session } } = await sb.auth.getSession();
-  hide('loading-overlay');
-  if (session) {
-    currentUser = session.user;
-    await startApp();
-  } else {
+  try {
+    const { data: { session } } = await sb.auth.getSession();
+    hide('loading-overlay');
+    if (session) {
+      currentUser = session.user;
+      await startApp();
+    } else {
+      show('auth-screen');
+    }
+  } catch(e) {
+    console.error('Init error:', e);
+    hide('loading-overlay');
     show('auth-screen');
   }
 }
