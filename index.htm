@@ -46,7 +46,7 @@
   /* ── AUTH ── */
   #auth-screen {
     min-height: 100vh;
-    display: flex !important;
+    display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #EFF6F1 0%, #F7F5F2 50%, #F0EDE8 100%);
@@ -1745,7 +1745,13 @@ function loadReports() {
 // ═══════════════════════════════════════════════
 // UTILS
 // ═══════════════════════════════════════════════
-function show(id) { const el=document.getElementById(id); if(!el) return; el.style.display = id==='app' ? 'block' : ''; }
+function show(id) {
+  const el=document.getElementById(id);
+  if(!el) return;
+  if(id==='auth-screen') el.style.display='flex';
+  else if(id==='app') el.style.display='block';
+  else el.style.display='';
+}
 function hide(id) { const el=document.getElementById(id); if(el) el.style.display='none'; }
 function val(id) { return document.getElementById(id)?.value||''; }
 function setV(id, v) { const el=document.getElementById(id); if(el) el.value=v; }
