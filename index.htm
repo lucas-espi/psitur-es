@@ -29,11 +29,11 @@
     --font-body: 'DM Sans', system-ui, sans-serif;
     --nav-h: 64px;
   }
- 
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
   html { scroll-behavior: smooth; }
- 
+
   body {
     font-family: var(--font-body);
     background: var(--bg);
@@ -42,7 +42,7 @@
     font-size: 15px;
     line-height: 1.6;
   }
- 
+
   /* ── AUTH ── */
   #auth-screen {
     min-height: 100vh;
@@ -94,7 +94,7 @@
     background: transparent;
   }
   .auth-tab.active { background: var(--surface); color: var(--text); box-shadow: 0 1px 4px rgba(0,0,0,.08); }
- 
+
   /* ── FORMS ── */
   .field { margin-bottom: 16px; }
   .field label { display: block; font-size: 13px; font-weight: 500; color: var(--text-muted); margin-bottom: 6px; letter-spacing: .03em; text-transform: uppercase; }
@@ -115,7 +115,7 @@
     box-shadow: 0 0 0 3px rgba(123,158,135,.15);
   }
   .field textarea { resize: vertical; min-height: 100px; }
- 
+
   .btn {
     display: inline-flex;
     align-items: center;
@@ -143,7 +143,7 @@
   .btn-full { width: 100%; }
   .btn-sm { padding: 6px 12px; font-size: 13px; }
   .btn:disabled { opacity: .5; cursor: not-allowed; transform: none !important; }
- 
+
   /* ── NAV ── */
   #app { display: none; min-height: 100vh; }
   .topbar {
@@ -211,19 +211,19 @@
     font-weight: 600;
     font-size: 13px;
   }
- 
+
   /* ── MAIN CONTENT ── */
   .main-content {
     padding: 32px 24px;
     max-width: 1200px;
     margin: calc(var(--nav-h) + 24px) auto 0 auto;
   }
- 
+
   /* ── VIEWS ── */
   .view { display: none; animation: fadeIn .25s ease; }
   .view.active { display: block; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
- 
+
   /* ── PAGE HEADERS ── */
   .page-header {
     display: flex;
@@ -235,7 +235,7 @@
   }
   .page-title { font-family: var(--font-display); font-size: 1.8rem; color: var(--text); }
   .page-subtitle { color: var(--text-muted); font-size: 14px; margin-top: 2px; }
- 
+
   /* ── CARDS ── */
   .card {
     background: var(--surface);
@@ -254,7 +254,7 @@
   }
   .card-title { font-weight: 600; font-size: 15px; }
   .card-body { padding: 20px; }
- 
+
   /* ── CALENDAR ── */
   .calendar-nav {
     display: flex;
@@ -282,7 +282,7 @@
     transition: all .15s;
   }
   .view-toggle button.active { background: var(--surface); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
- 
+
   /* Day view */
   .day-view { display: grid; grid-template-columns: 60px 1fr; gap: 0; }
   .time-col { display: flex; flex-direction: column; }
@@ -324,7 +324,7 @@
   .cal-event:hover { filter: brightness(.96); transform: translateX(2px); }
   .cal-event.paid { background: #EBF5EE; border-left-color: #5A9E70; color: #2D6B3F; }
   .cal-event.unpaid { background: var(--warning-light); border-left-color: var(--warning); color: #7A5A1A; }
- 
+
   /* Week view */
   .week-grid {
     display: grid;
@@ -383,7 +383,7 @@
   }
   .week-event.paid { background: #EBF5EE; border-left-color: #5A9E70; color: #2D6B3F; }
   .week-event.unpaid { background: var(--warning-light); border-left-color: var(--warning); color: #7A5A1A; }
- 
+
   /* ── PATIENTS ── */
   .patients-grid {
     display: grid;
@@ -424,7 +424,7 @@
   }
   .patient-stat { font-size: 12px; color: var(--text-muted); }
   .patient-stat strong { color: var(--text); font-weight: 600; display: block; font-size: 14px; }
- 
+
   /* ── PATIENT DETAIL ── */
   .back-btn {
     display: inline-flex;
@@ -479,7 +479,7 @@
     transition: all .2s;
   }
   .detail-tab.active { color: var(--accent-dark); border-bottom-color: var(--accent-dark); }
- 
+
   /* ── DIARY ── */
   .diary-entry {
     border: 1px solid var(--border);
@@ -525,7 +525,7 @@
     padding-top: 12px;
     border-top: 1px solid var(--border);
   }
- 
+
   /* ── SESSIONS TABLE ── */
   .table-wrap { overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; }
@@ -533,7 +533,7 @@
   td { padding: 12px 14px; border-bottom: 1px solid var(--border); font-size: 14px; vertical-align: middle; }
   tr:last-child td { border-bottom: none; }
   tr:hover td { background: var(--bg); }
- 
+
   .badge {
     display: inline-flex;
     align-items: center;
@@ -546,7 +546,7 @@
   .badge-paid { background: #EBF5EE; color: #2D6B3F; }
   .badge-unpaid { background: var(--warning-light); color: #7A5A1A; }
   .badge-neutral { background: var(--surface2); color: var(--text-muted); }
- 
+
   /* ── REPORTS ── */
   .stats-grid {
     display: grid;
@@ -564,7 +564,7 @@
   .stat-label { font-size: 12px; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
   .stat-value { font-family: var(--font-display); font-size: 2rem; color: var(--text); line-height: 1.1; }
   .stat-sub { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
- 
+
   /* ── MODAL ── */
   .modal-overlay {
     position: fixed;
@@ -602,7 +602,7 @@
   .modal-footer { padding: 16px 24px 20px; display: flex; gap: 10px; justify-content: flex-end; }
   .close-btn { background: none; border: none; cursor: pointer; color: var(--text-muted); font-size: 20px; padding: 2px; border-radius: 4px; transition: color .2s; }
   .close-btn:hover { color: var(--text); }
- 
+
   /* ── TOAST ── */
   .toast-container {
     position: fixed;
@@ -625,7 +625,7 @@
   }
   .toast.success { background: var(--accent-dark); }
   .toast.error { background: var(--danger); }
- 
+
   /* ── SEARCH ── */
   .search-bar {
     position: relative;
@@ -651,7 +651,7 @@
     color: var(--text-muted);
     font-size: 15px;
   }
- 
+
   /* ── EMPTY STATES ── */
   .empty-state {
     text-align: center;
@@ -661,7 +661,7 @@
   .empty-icon { font-size: 2.5rem; margin-bottom: 12px; opacity: .5; }
   .empty-title { font-weight: 600; font-size: 15px; color: var(--text); margin-bottom: 4px; }
   .empty-sub { font-size: 14px; }
- 
+
   /* ── MONTH PICKER ── */
   .month-picker {
     display: flex;
@@ -679,7 +679,7 @@
     cursor: pointer;
     outline: none;
   }
- 
+
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     .topbar { padding: 0 16px; }
@@ -694,12 +694,12 @@
     .modal { max-width: 100%; margin: 0; border-radius: 16px 16px 0 0; position: fixed; bottom: 0; }
     .modal-overlay { align-items: flex-end; padding: 0; }
   }
- 
+
   @media (max-width: 480px) {
     .stats-grid { grid-template-columns: 1fr; }
     .nav-btn { padding: 6px 10px; }
   }
- 
+
   .divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
   .text-muted { color: var(--text-muted); }
   .text-sm { font-size: 13px; }
@@ -709,7 +709,7 @@
   .gap-12 { gap: 12px; }
   .mb-16 { margin-bottom: 16px; }
   .mb-24 { margin-bottom: 24px; }
- 
+
   /* loading */
   .spinner {
     width: 20px; height: 20px;
@@ -733,13 +733,13 @@
 </style>
 </head>
 <body>
- 
+
 <!-- LOADING -->
 <div class="loading-overlay" id="loading-overlay">
   <div class="spinner" style="border-top-color:var(--accent-dark);border-color:var(--border);"></div>
   Psicotur
 </div>
- 
+
 <!-- AUTH -->
 <div id="auth-screen" style="display:none;">
   <div class="auth-card">
@@ -749,7 +749,7 @@
       <button class="auth-tab active" onclick="switchAuthTab('login')">Iniciar sesión</button>
       <button class="auth-tab" onclick="switchAuthTab('register')">Registrarse</button>
     </div>
- 
+
     <!-- LOGIN -->
     <div id="login-form">
       <div class="field"><label>Email</label><input type="email" id="login-email" placeholder="tu@email.com" autocomplete="email"></div>
@@ -759,7 +759,7 @@
         <button class="btn btn-ghost btn-sm" onclick="switchAuthTab('forgot')" style="font-size:13px;color:var(--text-muted);">¿Olvidaste tu contraseña?</button>
       </div>
     </div>
- 
+
     <!-- REGISTER -->
     <div id="register-form" style="display:none;">
       <div class="field"><label>Nombre completo</label><input type="text" id="reg-name" placeholder="Lic. María García"></div>
@@ -767,7 +767,7 @@
       <div class="field"><label>Contraseña</label><input type="password" id="reg-pass" placeholder="Mínimo 6 caracteres"></div>
       <button class="btn btn-primary btn-full" onclick="doRegister()" id="register-btn" style="margin-top:8px;">Crear cuenta</button>
     </div>
- 
+
     <!-- FORGOT PASSWORD -->
     <div id="forgot-form" style="display:none;">
       <div style="font-size:14px;color:var(--text-muted);margin-bottom:20px;line-height:1.6;">
@@ -779,7 +779,7 @@
         <button class="btn btn-ghost btn-sm" onclick="switchAuthTab('login')" style="font-size:13px;color:var(--text-muted);">← Volver al login</button>
       </div>
     </div>
- 
+
     <!-- RESET PASSWORD (cuando el usuario vuelve del email) -->
     <div id="reset-form" style="display:none;">
       <div style="font-size:14px;color:var(--text-muted);margin-bottom:20px;line-height:1.6;">
@@ -789,12 +789,12 @@
       <div class="field"><label>Confirmar contraseña</label><input type="password" id="reset-pass-confirm" placeholder="Repetí la nueva contraseña"></div>
       <button class="btn btn-primary btn-full" onclick="doResetPassword()" id="reset-btn">Guardar nueva contraseña</button>
     </div>
- 
+
     <div id="auth-error" style="margin-top:12px;font-size:13px;color:var(--danger);display:none;"></div>
     <div id="auth-success" style="margin-top:12px;font-size:13px;color:var(--accent-dark);background:var(--accent-light);padding:10px 14px;border-radius:var(--radius-sm);display:none;"></div>
   </div>
 </div>
- 
+
 <!-- APP -->
 <div id="app">
   <div class="topbar">
@@ -824,9 +824,9 @@
       <button class="btn btn-ghost btn-sm" onclick="doLogout()">Salir</button>
     </div>
   </div>
- 
+
   <div class="main-content">
- 
+
     <!-- ════════ AGENDA ════════ -->
     <div class="view active" id="view-agenda">
       <div class="page-header">
@@ -845,7 +845,7 @@
           </button>
         </div>
       </div>
- 
+
       <div class="card">
         <div class="card-header">
           <div class="calendar-nav" style="width:100%;margin-bottom:0;">
@@ -865,7 +865,7 @@
         </div>
       </div>
     </div>
- 
+
     <!-- ════════ PATIENTS ════════ -->
     <div class="view" id="view-patients">
       <div class="page-header">
@@ -886,7 +886,7 @@
       </div>
       <div class="patients-grid" id="patients-grid"></div>
     </div>
- 
+
     <!-- ════════ PATIENT DETAIL ════════ -->
     <div class="view" id="view-patient-detail">
       <button class="back-btn" onclick="showView('patients')">
@@ -908,7 +908,7 @@
         <button class="detail-tab active" onclick="switchDetailTab('diary')" data-dtab="diary">Diario clínico</button>
         <button class="detail-tab" onclick="switchDetailTab('sessions')" data-dtab="sessions">Turnos</button>
       </div>
- 
+
       <!-- DIARY -->
       <div id="dtab-diary">
         <div class="diary-add">
@@ -921,7 +921,7 @@
         </div>
         <div id="diary-entries"></div>
       </div>
- 
+
       <!-- SESSIONS -->
       <div id="dtab-sessions" style="display:none;">
         <div style="display:flex;justify-content:flex-end;margin-bottom:16px;">
@@ -937,7 +937,7 @@
         </div>
       </div>
     </div>
- 
+
     <!-- ════════ REPORTS ════════ -->
     <div class="view" id="view-reports">
       <div class="page-header">
@@ -950,9 +950,9 @@
           <select id="report-year" onchange="loadReports()"></select>
         </div>
       </div>
- 
+
       <div class="stats-grid" id="report-stats"></div>
- 
+
       <div class="card">
         <div class="card-header">
           <span class="card-title">Detalle por paciente</span>
@@ -965,12 +965,12 @@
         </div>
       </div>
     </div>
- 
+
   </div><!-- end main-content -->
 </div><!-- end app -->
- 
+
 <!-- ════════ MODALS ════════ -->
- 
+
 <!-- New/Edit Session -->
 <div class="modal-overlay" id="modal-session">
   <div class="modal">
@@ -1014,7 +1014,7 @@
     </div>
   </div>
 </div>
- 
+
 <!-- New/Edit Patient -->
 <div class="modal-overlay" id="modal-patient">
   <div class="modal">
@@ -1037,7 +1037,7 @@
     </div>
   </div>
 </div>
- 
+
 <!-- Session Detail -->
 <div class="modal-overlay" id="modal-session-detail">
   <div class="modal">
@@ -1053,7 +1053,7 @@
     </div>
   </div>
 </div>
- 
+
 <!-- Settings Modal -->
 <div class="modal-overlay" id="modal-settings">
   <div class="modal">
@@ -1078,10 +1078,10 @@
     </div>
   </div>
 </div>
- 
+
 <!-- TOAST -->
 <div class="toast-container" id="toast-container"></div>
- 
+
 <script>
 // ═══════════════════════════════════════════════
 // SUPABASE INIT
@@ -1102,7 +1102,7 @@ const sb = createClient(SUPABASE_URL, SUPABASE_KEY, {
     }
   }
 });
- 
+
 // ═══════════════════════════════════════════════
 // STATE
 // ═══════════════════════════════════════════════
@@ -1116,33 +1116,32 @@ let currentPatientId = null;
 let currentSessionId = null;
 let editingPatientId = null;
 let editingSessionId = null;
- 
+
 // ═══════════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════════
 async function init() {
   try {
-    // Detectar si el usuario viene desde un link de reset de contraseña
-    const hash = window.location.hash;
-    if (hash && hash.includes('type=recovery')) {
-      // Supabase incluye el token en el hash — lo procesamos
-      const { data: { session }, error } = await sb.auth.getSession();
-      hide('loading-overlay');
-      show('auth-screen');
-      if (session) {
-        // Tiene sesión activa por el link de recovery → mostrar formulario de reset
+    // Escuchar eventos de auth — detecta el token de recovery automáticamente
+    sb.auth.onAuthStateChange((event, session) => {
+      if (event === 'PASSWORD_RECOVERY') {
+        hide('loading-overlay');
+        show('auth-screen');
         switchAuthTab('reset');
-      } else {
-        switchAuthTab('login');
+        history.replaceState(null, '', window.location.pathname);
       }
-      // Limpiamos el hash de la URL para que no quede visible
-      history.replaceState(null, '', window.location.pathname);
-      return;
-    }
- 
+    });
+
     const { data: { session } } = await sb.auth.getSession();
     hide('loading-overlay');
     if (session) {
+      // Si hay sesión pero venimos de recovery, mostrar reset
+      if (window.location.hash.includes('type=recovery')) {
+        show('auth-screen');
+        switchAuthTab('reset');
+        history.replaceState(null, '', window.location.pathname);
+        return;
+      }
       currentUser = session.user;
       await startApp();
     } else {
@@ -1154,7 +1153,7 @@ async function init() {
     show('auth-screen');
   }
 }
- 
+
 async function startApp() {
   // Ensure DB tables exist
   await ensureTables();
@@ -1165,7 +1164,7 @@ async function startApp() {
   showView('agenda');
   setupReportPickers();
 }
- 
+
 async function ensureTables() {
   // Tables created via Supabase dashboard SQL or auto-created on first insert
   // We just attempt a select to warm up
@@ -1175,7 +1174,7 @@ async function ensureTables() {
     await sb.from('diary_entries').select('id').limit(1);
   } catch(e) {}
 }
- 
+
 function updateUserNav() {
   const meta = currentUser.user_metadata;
   const name = meta?.full_name || currentUser.email.split('@')[0];
@@ -1184,7 +1183,7 @@ function updateUserNav() {
   const nameEl = document.getElementById('user-name-nav');
   if (nameEl) { nameEl.textContent = name; }
 }
- 
+
 async function loadAll() {
   const uid = currentUser.id;
   const [pRes, sRes] = await Promise.all([
@@ -1194,12 +1193,12 @@ async function loadAll() {
   patients = pRes.data || [];
   sessions = sRes.data || [];
 }
- 
+
 // ═══════════════════════════════════════════════
 // CIFRADO AES-256-GCM (Web Crypto API)
 // ═══════════════════════════════════════════════
 let cryptoKey = null; // clave en memoria, nunca se guarda en disco
- 
+
 async function deriveKey(password, userId) {
   const enc = new TextEncoder();
   // Usamos el userId como salt — es único por usuario y no es secreto
@@ -1215,7 +1214,7 @@ async function deriveKey(password, userId) {
     ['encrypt', 'decrypt']
   );
 }
- 
+
 async function encryptText(plaintext) {
   if (!cryptoKey) return plaintext; // fallback si no hay clave
   const enc = new TextEncoder();
@@ -1228,7 +1227,7 @@ async function encryptText(plaintext) {
   const ctB64 = btoa(String.fromCharCode(...new Uint8Array(cipherBuf)));
   return `enc:${ivB64}:${ctB64}`;
 }
- 
+
 async function decryptText(ciphertext) {
   if (!cryptoKey || !ciphertext?.startsWith('enc:')) return ciphertext; // texto viejo sin cifrar
   try {
@@ -1241,7 +1240,7 @@ async function decryptText(ciphertext) {
     return '[Nota cifrada — no se pudo descifrar]';
   }
 }
- 
+
 // ═══════════════════════════════════════════════
 // AUTH
 // ═══════════════════════════════════════════════
@@ -1254,17 +1253,17 @@ function switchAuthTab(tab) {
   hide('auth-error');
   hide('auth-success');
 }
- 
+
 function showAuthError(msg) {
   const el = document.getElementById('auth-error');
   el.textContent = msg; show('auth-error'); hide('auth-success');
 }
- 
+
 function showAuthSuccess(msg) {
   const el = document.getElementById('auth-success');
   el.textContent = msg; show('auth-success'); hide('auth-error');
 }
- 
+
 async function doForgotPassword() {
   const email = val('forgot-email');
   if (!email) return showAuthError('Ingresá tu email');
@@ -1277,7 +1276,7 @@ async function doForgotPassword() {
   showAuthSuccess('¡Listo! Revisá tu email — te mandamos el link para restablecer tu contraseña.');
   document.getElementById('forgot-btn').disabled = true;
 }
- 
+
 async function doResetPassword() {
   const newPass = val('reset-pass-new');
   const confirm = val('reset-pass-confirm');
@@ -1287,12 +1286,13 @@ async function doResetPassword() {
   setLoading('reset-btn', true);
   const { error } = await sb.auth.updateUser({ password: newPass });
   setLoading('reset-btn', false);
-  if (error) return showAuthError(error.message);
-  showAuthSuccess('¡Contraseña actualizada! Ya podés iniciar sesión.');
-  setTimeout(() => switchAuthTab('login'), 2000);
+  if (error) return showAuthError('Error: ' + error.message);
+  await sb.auth.signOut();
+  showAuthSuccess('¡Contraseña actualizada! Ya podés iniciar sesión con tu nueva contraseña.');
+  setTimeout(() => switchAuthTab('login'), 2500);
 }
- 
- 
+
+
 async function doLogin() {
   const email = val('login-email'), pass = val('login-pass');
   if (!email||!pass) return showAuthError('Completá todos los campos');
@@ -1304,7 +1304,7 @@ async function doLogin() {
   cryptoKey = await deriveKey(pass, currentUser.id);
   await startApp();
 }
- 
+
 async function doRegister() {
   const name = val('reg-name'), email = val('reg-email'), pass = val('reg-pass');
   if (!name||!email||!pass) return showAuthError('Completá todos los campos');
@@ -1318,58 +1318,58 @@ async function doRegister() {
   cryptoKey = await deriveKey(pass, currentUser.id);
   await startApp();
 }
- 
+
 async function changePassword() {
   const current = val('settings-pass-current');
   const newPass = val('settings-pass-new');
   const confirm = val('settings-pass-confirm');
   const errEl = document.getElementById('settings-error');
- 
+
   const showErr = (msg) => { errEl.textContent = msg; show('settings-error'); };
   hide('settings-error');
- 
+
   if (!current || !newPass || !confirm) return showErr('Completá todos los campos');
   if (newPass.length < 6) return showErr('La nueva contraseña debe tener al menos 6 caracteres');
   if (newPass !== confirm) return showErr('Las contraseñas nuevas no coinciden');
- 
+
   setLoading('change-pass-btn', true);
- 
+
   // Verificamos la contraseña actual re-autenticando
   const { error: signInError } = await sb.auth.signInWithPassword({
     email: currentUser.email,
     password: current
   });
- 
+
   if (signInError) {
     setLoading('change-pass-btn', false);
     return showErr('La contraseña actual es incorrecta');
   }
- 
+
   // Cambiamos la contraseña
   const { error } = await sb.auth.updateUser({ password: newPass });
   setLoading('change-pass-btn', false);
- 
+
   if (error) return showErr('Error al cambiar: ' + error.message);
- 
+
   // Actualizamos la clave de cifrado con la nueva contraseña
   cryptoKey = await deriveKey(newPass, currentUser.id);
- 
+
   closeModal('modal-settings');
   toast('Contraseña actualizada correctamente', 'success');
 }
- 
+
 async function doLogout() {
   await sb.auth.signOut();
   currentUser = null; patients = []; sessions = []; cryptoKey = null;
   hide('app'); show('auth-screen');
   toast('Sesión cerrada');
 }
- 
+
 function showAuthError(msg) {
   const el = document.getElementById('auth-error');
   el.textContent = msg; show('auth-error');
 }
- 
+
 // ═══════════════════════════════════════════════
 // VIEWS
 // ═══════════════════════════════════════════════
@@ -1381,20 +1381,20 @@ function showView(v) {
   if (viewEl) viewEl.classList.add('active');
   const navBtn = document.querySelector(`[data-view="${v}"]`);
   if (navBtn) navBtn.classList.add('active');
- 
+
   if (v === 'agenda') renderCalendar();
   if (v === 'patients') renderPatients();
   if (v === 'reports') loadReports();
   if (v === 'patient-detail') renderPatientDetail();
 }
- 
+
 // ═══════════════════════════════════════════════
 // CALENDAR
 // ═══════════════════════════════════════════════
 const DAYS_ES = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
 const MONTHS_ES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
 const DAYS_FULL = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
- 
+
 function setCalView(mode) {
   calViewMode = mode;
   document.getElementById('btn-day-view').classList.toggle('active', mode==='day');
@@ -1403,15 +1403,15 @@ function setCalView(mode) {
   hide(mode==='day'?'week-view-container':'day-view-container');
   renderCalendar();
 }
- 
+
 function calNav(dir) {
   if (calViewMode === 'day') calDate.setDate(calDate.getDate() + dir);
   else calDate.setDate(calDate.getDate() + dir * 7);
   renderCalendar();
 }
- 
+
 function goToday() { calDate = new Date(); renderCalendar(); }
- 
+
 function renderCalendar() {
   const today = new Date();
   if (calViewMode === 'day') {
@@ -1429,12 +1429,12 @@ function renderCalendar() {
     renderWeekView(weekStart);
   }
 }
- 
+
 function renderDayView() {
   const container = document.getElementById('day-view-container');
   const dayStr = dateStr(calDate);
   const daySessions = sessions.filter(s => s.date === dayStr);
- 
+
   let html = `<div style="overflow-y:auto;max-height:600px;"><div class="day-view">`;
   html += `<div class="time-col">`;
   for (let h = 7; h <= 22; h++) html += `<div class="time-slot-label">${h}:00</div>`;
@@ -1442,7 +1442,7 @@ function renderDayView() {
   for (let h = 7; h <= 22; h++) {
     html += `<div class="time-slot-row" onclick="openNewSessionModalAt('${dayStr}','${String(h).padStart(2,'0')}:00')" title="Agregar turno a las ${h}:00"></div>`;
   }
- 
+
   // place events
   daySessions.forEach(s => {
     const [hh, mm] = s.start_time.split(':').map(Number);
@@ -1458,23 +1458,23 @@ function renderDayView() {
     </div>`;
   });
   html += `</div></div></div>`;
- 
+
   if (daySessions.length === 0) {
     html += `<div style="padding:20px 24px;color:var(--text-muted);font-size:14px;">Sin turnos para este día. Hacé clic en un horario para agregar uno.</div>`;
   }
   container.innerHTML = html;
 }
- 
+
 function renderWeekView(weekStart) {
   const container = document.getElementById('week-view-container');
   const today = new Date();
- 
+
   // Build days array
   const days = [];
   for (let i=0;i<7;i++) { const d=new Date(weekStart); d.setDate(d.getDate()+i); days.push(d); }
- 
+
   let html = `<div style="overflow-x:auto;overflow-y:auto;max-height:600px;"><div class="week-grid">`;
- 
+
   // Header
   html += `<div class="week-header-cell" style="border-bottom:1px solid var(--border);background:var(--surface2);"></div>`;
   days.forEach(d => {
@@ -1484,7 +1484,7 @@ function renderWeekView(weekStart) {
       <div style="font-size:15px;font-weight:600;">${d.getDate()}</div>
     </div>`;
   });
- 
+
   // Time rows
   for (let h=7;h<=22;h++) {
     html += `<div class="week-time-label">${h}:00</div>`;
@@ -1504,7 +1504,7 @@ function renderWeekView(weekStart) {
   html += `</div></div>`;
   container.innerHTML = html;
 }
- 
+
 function getWeekStart(d) {
   const date = new Date(d);
   const day = date.getDay();
@@ -1512,7 +1512,7 @@ function getWeekStart(d) {
   date.setDate(diff);
   return date;
 }
- 
+
 // ═══════════════════════════════════════════════
 // SESSION MODAL
 // ═══════════════════════════════════════════════
@@ -1530,13 +1530,13 @@ function openNewSessionModal(prePatientId=null) {
   togglePaymentMethod();
   openModal('modal-session');
 }
- 
+
 function openNewSessionModalAt(date, time) {
   openNewSessionModal();
   setV('s-date', date);
   setV('s-time', time);
 }
- 
+
 function populatePatientSelect(selectedId=null) {
   const sel = document.getElementById('s-patient');
   sel.innerHTML = patients.map(p => `<option value="${p.id}"${p.id===selectedId?' selected':''}>${p.name}</option>`).join('');
@@ -1546,19 +1546,19 @@ function populatePatientSelect(selectedId=null) {
     if (p?.default_fee) setV('s-fee', p.default_fee);
   };
 }
- 
+
 function togglePaymentMethod() {
   const paid = val('s-paid');
   document.getElementById('s-payment-method-field').style.display = paid==='paid' ? 'block' : 'none';
 }
 document.addEventListener('change', e => { if(e.target.id==='s-paid') togglePaymentMethod(); });
- 
+
 async function saveSession() {
   const patId = val('s-patient');
   const date = val('s-date');
   const time = val('s-time');
   if (!patId||!date||!time) return toast('Completá los campos obligatorios', 'error');
- 
+
   const payload = {
     user_id: currentUser.id,
     patient_id: patId,
@@ -1569,7 +1569,7 @@ async function saveSession() {
     payment_method: val('s-paid')==='paid' ? val('s-payment-method') : null,
     notes: val('s-notes')
   };
- 
+
   setLoading('save-session-btn', true);
   let res;
   if (editingSessionId) {
@@ -1578,25 +1578,25 @@ async function saveSession() {
     res = await sb.from('sessions').insert(payload).select().single();
   }
   setLoading('save-session-btn', false);
- 
+
   if (res.error) return toast('Error al guardar: ' + res.error.message, 'error');
   if (editingSessionId) sessions = sessions.map(s=>s.id===editingSessionId?res.data:s);
   else sessions.push(res.data);
- 
+
   closeModal('modal-session');
   toast(editingSessionId ? 'Turno actualizado' : 'Turno guardado', 'success');
   if (currentView==='agenda') renderCalendar();
   if (currentView==='patient-detail') renderPatientDetail();
   if (currentView==='reports') loadReports();
 }
- 
+
 function openSessionDetail(id) {
   const s = sessions.find(x=>x.id===id);
   if (!s) return;
   currentSessionId = id;
   const pat = patients.find(p=>p.id===s.patient_id);
   const paid = s.paid_status==='paid';
- 
+
   document.getElementById('session-detail-body').innerHTML = `
     <div style="display:grid;gap:14px;">
       <div><span class="text-muted text-sm">Paciente</span><div style="font-weight:600;font-size:15px;margin-top:2px;">${pat?.name||'–'}</div></div>
@@ -1612,14 +1612,14 @@ function openSessionDetail(id) {
       ${s.notes ? `<div><span class="text-muted text-sm">Notas</span><div style="margin-top:4px;font-size:14px;color:var(--text);">${s.notes}</div></div>` : ''}
     </div>
   `;
- 
+
   const markBtn = document.getElementById('mark-paid-btn');
   if (paid) { markBtn.style.display='none'; }
   else { markBtn.style.display=''; markBtn.textContent='Marcar como pagado'; }
- 
+
   openModal('modal-session-detail');
 }
- 
+
 async function markSessionPaid(id) {
   const { data, error } = await sb.from('sessions')
     .update({ paid_status:'paid', payment_method:'transfer' })
@@ -1632,7 +1632,7 @@ async function markSessionPaid(id) {
   if (currentView==='patient-detail') renderPatientDetail();
   if (currentView==='reports') loadReports();
 }
- 
+
 async function deleteSession(id) {
   if (!confirm('¿Eliminar este turno?')) return;
   const { error } = await sb.from('sessions').delete().eq('id', id);
@@ -1644,7 +1644,7 @@ async function deleteSession(id) {
   if (currentView==='patient-detail') renderPatientDetail();
   if (currentView==='reports') loadReports();
 }
- 
+
 // ═══════════════════════════════════════════════
 // PATIENTS
 // ═══════════════════════════════════════════════
@@ -1680,12 +1680,12 @@ function renderPatients(filtered=null) {
     </div>`;
   }).join('');
 }
- 
+
 function filterPatients() {
   const q = val('patient-search').toLowerCase();
   renderPatients(patients.filter(p => p.name.toLowerCase().includes(q)));
 }
- 
+
 function openNewPatientModal() {
   editingPatientId = null;
   document.getElementById('modal-patient-title').textContent = 'Nuevo paciente';
@@ -1694,7 +1694,7 @@ function openNewPatientModal() {
   setV('p-fee',''); setV('p-notes','');
   openModal('modal-patient');
 }
- 
+
 function openEditPatientModal() {
   const p = patients.find(x=>x.id===currentPatientId);
   if (!p) return;
@@ -1706,7 +1706,7 @@ function openEditPatientModal() {
   setV('p-notes', p.notes||'');
   openModal('modal-patient');
 }
- 
+
 async function savePatient() {
   const name = val('p-name');
   if (!name) return toast('El nombre es obligatorio', 'error');
@@ -1732,7 +1732,7 @@ async function savePatient() {
   renderPatients();
   if (currentView==='patient-detail') renderPatientDetail();
 }
- 
+
 async function deleteCurrentPatient() {
   if (!confirm('¿Eliminar este paciente y todos sus turnos y notas?')) return;
   await sb.from('sessions').delete().eq('patient_id', currentPatientId);
@@ -1744,7 +1744,7 @@ async function deleteCurrentPatient() {
   toast('Paciente eliminado');
   showView('patients');
 }
- 
+
 // ═══════════════════════════════════════════════
 // PATIENT DETAIL
 // ═══════════════════════════════════════════════
@@ -1752,7 +1752,7 @@ function openPatientDetail(id) {
   currentPatientId = id;
   showView('patient-detail');
 }
- 
+
 async function renderPatientDetail() {
   const p = patients.find(x=>x.id===currentPatientId);
   if (!p) return showView('patients');
@@ -1760,20 +1760,20 @@ async function renderPatientDetail() {
   document.getElementById('detail-avatar').textContent = initials;
   document.getElementById('detail-name').textContent = p.name;
   document.getElementById('detail-meta').textContent = [p.phone, p.email, p.default_fee?`Honorario: $${Number(p.default_fee).toLocaleString('es-AR')}`:null].filter(Boolean).join(' · ');
- 
+
   const today = new Date();
   document.getElementById('new-entry-date').textContent = formatDate(dateStr(today));
- 
+
   await loadDiaryEntries();
   renderPatientSessions();
 }
- 
+
 function switchDetailTab(tab) {
   document.querySelectorAll('.detail-tab').forEach(t => t.classList.toggle('active', t.dataset.dtab===tab));
   show('dtab-'+tab);
   hide(tab==='diary'?'dtab-sessions':'dtab-diary');
 }
- 
+
 async function loadDiaryEntries() {
   const { data } = await sb.from('diary_entries')
     .select('*').eq('patient_id', currentPatientId)
@@ -1804,7 +1804,7 @@ async function loadDiaryEntries() {
     </div>
   `).join('');
 }
- 
+
 function startEditDiary(id) {
   document.getElementById('entry-body-' + id).style.display = 'none';
   document.getElementById('entry-edit-' + id).style.display = 'block';
@@ -1812,12 +1812,12 @@ function startEditDiary(id) {
   ta.focus();
   ta.setSelectionRange(ta.value.length, ta.value.length);
 }
- 
+
 function cancelEditDiary(id) {
   document.getElementById('entry-body-' + id).style.display = '';
   document.getElementById('entry-edit-' + id).style.display = 'none';
 }
- 
+
 async function saveEditDiary(id) {
   const plaintext = document.getElementById('entry-textarea-' + id).value.trim();
   if (!plaintext) return toast('La nota no puede estar vacía', 'error');
@@ -1827,7 +1827,7 @@ async function saveEditDiary(id) {
   toast('Nota actualizada', 'success');
   await loadDiaryEntries();
 }
- 
+
 async function saveDiaryEntry() {
   const plaintext = document.getElementById('new-diary-text').value.trim();
   if (!plaintext) return toast('Escribí algo antes de guardar', 'error');
@@ -1842,14 +1842,14 @@ async function saveDiaryEntry() {
   toast('Nota guardada', 'success');
   await loadDiaryEntries();
 }
- 
+
 async function deleteDiaryEntry(id) {
   if (!confirm('¿Eliminar esta nota?')) return;
   await sb.from('diary_entries').delete().eq('id', id);
   toast('Nota eliminada');
   await loadDiaryEntries();
 }
- 
+
 function renderPatientSessions() {
   const pSessions = sessions.filter(s=>s.patient_id===currentPatientId)
     .sort((a,b) => (b.date+b.start_time).localeCompare(a.date+a.start_time));
@@ -1872,7 +1872,7 @@ function renderPatientSessions() {
     </tr>`;
   }).join('');
 }
- 
+
 // ═══════════════════════════════════════════════
 // REPORTS
 // ═══════════════════════════════════════════════
@@ -1883,17 +1883,17 @@ function setupReportPickers() {
   const yr = new Date().getFullYear();
   for (let y=yr; y>=yr-3; y--) ySel.innerHTML += `<option value="${y}">${y}</option>`;
 }
- 
+
 function loadReports() {
   const month = parseInt(val('report-month'));
   const year = parseInt(val('report-year'));
   const monthStr = `${year}-${String(month).padStart(2,'0')}`;
   const mSessions = sessions.filter(s => s.date.startsWith(monthStr));
- 
+
   const totalFee = mSessions.reduce((a,s)=>a+Number(s.fee||0),0);
   const totalPaid = mSessions.filter(s=>s.paid_status==='paid').reduce((a,s)=>a+Number(s.fee||0),0);
   const totalPending = totalFee - totalPaid;
- 
+
   document.getElementById('report-stats').innerHTML = `
     <div class="stat-card">
       <div class="stat-label">Total facturado</div>
@@ -1916,7 +1916,7 @@ function loadReports() {
       <div class="stat-sub">este mes</div>
     </div>
   `;
- 
+
   // Per patient
   const byPatient = {};
   mSessions.forEach(s => {
@@ -1926,7 +1926,7 @@ function loadReports() {
     if (s.paid_status==='paid') byPatient[s.patient_id].paid += Number(s.fee||0);
     else byPatient[s.patient_id].pending += Number(s.fee||0);
   });
- 
+
   const tbody = document.getElementById('report-tbody');
   if (!Object.keys(byPatient).length) {
     tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;color:var(--text-muted);padding:40px;">Sin sesiones en este mes</td></tr>`;
@@ -1945,7 +1945,7 @@ function loadReports() {
       </tr>`;
     }).join('');
 }
- 
+
 // ═══════════════════════════════════════════════
 // UTILS
 // ═══════════════════════════════════════════════
@@ -1963,7 +1963,7 @@ function sameDay(a,b) { return a.getDate()===b.getDate()&&a.getMonth()===b.getMo
 function dateStr(d) { return d.toISOString().split('T')[0]; }
 function escHtml(t) { return (t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>'); }
 function payMethodLabel(m) { return {transfer:'Transferencia',cash:'Efectivo',other:'Otro'}[m]||m; }
- 
+
 function formatDate(str) {
   if (!str) return '–';
   const [y,m,d] = str.split('-');
@@ -1974,7 +1974,7 @@ function formatDateTime(str) {
   const d = new Date(str);
   return d.toLocaleDateString('es-AR', {day:'2-digit',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit'});
 }
- 
+
 function setLoading(btnId, loading) {
   const btn = document.getElementById(btnId);
   if (!btn) return;
@@ -1982,7 +1982,7 @@ function setLoading(btnId, loading) {
   if (loading) btn.innerHTML = `<span class="spinner"></span>`;
   else btn.textContent = btn.dataset.originalText || btn.textContent;
 }
- 
+
 function openModal(id) {
   document.getElementById(id).classList.add('open');
   if (id === 'modal-settings') {
@@ -1994,12 +1994,12 @@ function openModal(id) {
   }
 }
 function closeModal(id) { document.getElementById(id).classList.remove('open'); }
- 
+
 // Close modal on overlay click
 document.querySelectorAll('.modal-overlay').forEach(overlay => {
   overlay.addEventListener('click', e => { if(e.target===overlay) overlay.classList.remove('open'); });
 });
- 
+
 let toastTimeout;
 function toast(msg, type='') {
   const container = document.getElementById('toast-container');
@@ -2009,7 +2009,7 @@ function toast(msg, type='') {
   container.appendChild(el);
   setTimeout(() => el.remove(), 3000);
 }
- 
+
 // ═══════════════════════════════════════════════
 // START
 // ═══════════════════════════════════════════════
